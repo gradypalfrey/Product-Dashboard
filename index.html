@@ -6,27 +6,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .material-icons.blue600 {color: #2c54e9; }
+    </style>
 </head>
 <body ng-app="MyApp">
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-expand-sm bg-light">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand">VenturX: Prototype</a>
+                <div class="container">
+                    <div class="row">
+                        <img src="https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1469054846/sy7o8uzfw8potlewdrtm.png" style="height: 45px">
+                        <a class="navbar-brand">VenturX: Prototype</a>
+                    </div>
+                </div>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a><strong>Hello, 16,@test.com</strong></a></li>
-                <li><a>Logout</a></li>
+            <ul class="nav navbar-nav navbar-right" style="color: grey">
+                <li style="padding-right: 30px"><a><strong>Hello, 16,@test.com</strong></a></li>
+                <li><a>Log Out</a></li>
             </ul>
         </div>
     </nav>
     <div class="container">
         <div class="row" style="position: relative; top: 50%; transform: translateY(50%);">
-            <div class="col-md-3">
-                <div class="person">
-                    <img src="person.png" class="rounded" height="120" alt="person.jpg">
+            <div class="col-md-4">
+                <div class="person" style="position: relative; left: 20%">
+                    <img src="https://leadersinsport.com/wp-content/uploads/2018/11/blank-profile-hi.png" class="rounded" height="125" alt="person.jpg">
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
                 <div class="row" style="border:2px solid #000; padding-right: 80px">
                     <div class="container-fluid" style="padding: 20px">
                         <div class="row">
@@ -53,8 +62,8 @@
                                 What is the benefit that will match that pain statement?
                             </div>
                             <div class="col-md-1">
-                                <div class="btn btn-default" style="padding:2px">
-                                    <button>Edit Profile</button>
+                                <div>
+                                    <button type="button" class="btn btn-light" style="padding:5px; border: solid 1px lightgray">Edit Profile</button>
                                 </div>
                             </div>
                         </div>
@@ -65,49 +74,108 @@
     </div>
     <div class="container-fluid" style="text-align: center; padding-bottom: 50px">
         <div class="row" style="padding-top: 100px">
-            <div class="col-sm-12 col-sm-offset-5">
-                How is
-                <strong style="font-size: 20px">VenturX</strong>
-                doing today?
-                Check dashboard
+            <div class="col-sm-12 col-sm-offset-8">
+                <h1 style="font-size:26px; font-style:italic; text-align: center">
+                    How is
+                    <span style="font-weight: bold">VenturX</span>
+                    <span class="material-icons blue600">edit</span>
+                    doing today?
+                    <span style="font-size: 16px; color: grey">Check dashboard</span>
+                </h1>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row">
+        <div class="row" style="position: relative; left: 2%">
             <div class="col-sm-3">
                 <div class="bar">
-                    <md-progress-circular class="md-warn" md-mode="determinate" value="100" md-diameter="200"></md-progress-circular>
-                    <md-progress-circular style="position:relative; bottom:206px" class="md-100" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
-                    <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:401px; left:10px"></div>
+                    <div class="cirlce" style="width:200px; height:200px; border-radius:100px; background:lightgray;"></div>
+                    <md-progress-circular style="position:relative; bottom:200px" class="md-warn" md-mode="determinate" value="27" md-diameter="200"></md-progress-circular>
+                    <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:396px; left:10px"></div>
+                    <div class="text" style="position: relative; bottom:520px; left: 70px">
+                        <div class="container">
+                            <div class="row">
+                                <h1>27</h1>
+                                <span style="position: relative; top: 20px; color: grey">%</span>
+                            </div>
+                        </div>
+                        Product
+                    </div>
                 </div>
             </div>
             <div class="col-sm-3">
-                <md-progress-circular class="md-no-focus" md-red="determinate" value="100" md-diameter="200"></md-progress-circular>
-                <md-progress-circular style="position:relative; bottom:206px" class="md-accent" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
-                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:401px; left:10px"></div>
+                <div class="cirlce" style="width:200px; height:200px; border-radius:100px; background:lightgray;"></div>
+                <md-progress-circular style="position:relative; bottom:200px" class="md-warn md-hue-2" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
+                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:396px; left:10px"></div>
+                <div class="text" style="position: relative; bottom:520px; left: 70px">
+                    <div class="container">
+                        <div class="row">
+                            <h1 style="position: relative; right: 10px;">3</h1>
+                            <span style="position: relative; top: 20px; right: 5px; color: grey">months</span>
+                        </div>
+                    </div>
+                    Runway
+                </div>
             </div>
             <div class="col-sm-3">
-                <md-progress-circular class="md-warn" md-mode="determinate" value="100" md-diameter="200"></md-progress-circular>
-                <md-progress-circular style="position:relative; bottom:205px" class="md-100" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
-                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:401px; left:10px"></div>
+                <div class="cirlce" style="width:200px; height:200px; border-radius:100px; background:lightgray;"></div>
+                <md-progress-circular style="position:relative; bottom:200px" class="md-warn" md-mode="determinate" value="24" md-diameter="200"></md-progress-circular>
+                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:396px; left:10px"></div>
+                <div class="text" style="position: relative; bottom:520px; left: 70px">
+                    <div class="container">
+                        <div class="row">
+                            <h1>24</h1>
+                            <span style="position: relative; top: 20px; color: grey">%</span>
+                        </div>
+                    </div>
+                    Conversion
+                </div>
             </div>
             <div class="col-sm-3">
-                <md-progress-circular class="md-warn" md-mode="determinate" value="100" md-diameter="200"></md-progress-circular>
-                <md-progress-circular style="position:relative; bottom:206px" class="md-100" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
-                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:401px; left:10px"></div>
+                <div class="cirlce" style="width:200px; height:200px; border-radius:100px; background:lightgray;"></div>
+                <md-progress-circular style="position:relative; bottom:200px" class="md-background md-500" md-mode="determinate" value="100" md-diameter="200"></md-progress-circular>
+                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:396px; left:10px"></div>
+                <div class="text" style="position: relative; bottom:520px; left: 60px">
+                    <div class="container">
+                        <div class="row">
+                            <h1>100</h1>
+                            <span style="position: relative; top: 20px; color: grey">%</span>
+                        </div>
+                    </div>
+                    Engagement
+                </div>
             </div>
         </div>
     </div>
 
 
-    <div class="container" style="position: relative; top:-200px;">
+    <div class="container" style="position: relative; bottom: 400px;">
         <div class="card" style="background: #feff94; border-color: #e2c600; color: rgb(205,133,8);">
-            <div class="card-body">Simp</div>
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <h1 style="font-size:16px; text-align: center">
+                            <span style="font-weight: bold">Small coversion?</span>
+                            Learn what you can do to
+                            <span style="font-size: 16px; font-weight: bold;">rise your conversion</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card" style="background: #f6a8a8; border-color: #7c3030; color: #432121">
-            <div class="card-body">Low prduct score?</div>
+        <div class="card" style="background: #ff9494; border-color: #a71522; color: rgb(86,21,21); top: 20px">
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <h1 style="font-size:16px; text-align: center">
+                            <span style="font-weight: bold">Low product score?</span>
+                            <span style="font-size: 16px; font-weight: bold;">Try this</span>
+                            to get more...
+                        </h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -122,25 +190,5 @@
                 console.log('MyApp is ready!')
             });
     </script>
-    <script>
-        angular.module('myApp', ['ngMaterial'])
-            .config(function($mdThemingProvider) {
-
-                $mdThemingProvider.theme('default')
-                    .primaryPalette('pink', {
-                        'default': '400', // by default use shade 400 from the pink palette for primary intentions
-                        'hue-1': '100', // use shade 100 for the <code>md-hue-1</code> class
-                        'hue-2': '600', // use shade 600 for the <code>md-hue-2</code> class
-                        'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
-                    })
-                    // If you specify less than all of the keys, it will inherit from the
-                    // default shades
-                    .accentPalette('purple', {
-                        'default': '200' // use shade 200 for default, and keep all other shades the same
-                    });
-
-            });
-    </script>
-
 </body>
 </html>
