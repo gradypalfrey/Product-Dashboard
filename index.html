@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
-<body>
+<body ng-app="MyApp">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -63,7 +63,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" style="text-align: center; padding-bottom: 50px">
         <div class="row" style="padding-top: 100px">
             <div class="col-sm-12 col-sm-offset-5">
                 How is
@@ -77,29 +77,70 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <md-progress-circular md-mode="determinate" value="..." md-diameter="100"></md-progress-circular>
+                <div class="bar">
+                    <md-progress-circular class="md-warn" md-mode="determinate" value="100" md-diameter="200"></md-progress-circular>
+                    <md-progress-circular style="position:relative; bottom:206px" class="md-100" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
+                    <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:401px; left:10px"></div>
+                </div>
             </div>
             <div class="col-sm-3">
-
+                <md-progress-circular class="md-no-focus" md-red="determinate" value="100" md-diameter="200"></md-progress-circular>
+                <md-progress-circular style="position:relative; bottom:206px" class="md-accent" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
+                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:401px; left:10px"></div>
             </div>
             <div class="col-sm-3">
-
+                <md-progress-circular class="md-warn" md-mode="determinate" value="100" md-diameter="200"></md-progress-circular>
+                <md-progress-circular style="position:relative; bottom:205px" class="md-100" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
+                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:401px; left:10px"></div>
             </div>
             <div class="col-sm-3">
-
+                <md-progress-circular class="md-warn" md-mode="determinate" value="100" md-diameter="200"></md-progress-circular>
+                <md-progress-circular style="position:relative; bottom:206px" class="md-100" md-mode="determinate" value="10" md-diameter="200"></md-progress-circular>
+                <div class="cirlce" style="width:180px; height:180px; border-radius:90px; background:white; position:relative; bottom:401px; left:10px"></div>
             </div>
         </div>
     </div>
 
 
-    <div class="container">
-        <div class="card" style="background: #feff94; border-color: #e2c600; color: #707051">
+    <div class="container" style="position: relative; top:-200px;">
+        <div class="card" style="background: #feff94; border-color: #e2c600; color: rgb(205,133,8);">
             <div class="card-body">Simp</div>
         </div>
         <div class="card" style="background: #f6a8a8; border-color: #7c3030; color: #432121">
             <div class="card-body">Low prduct score?</div>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-aria.js"></script>
+    <script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
+
+    <script>
+        angular.module('MyApp', ['ngMaterial'])
+            .run(function () {
+                console.log('MyApp is ready!')
+            });
+    </script>
+    <script>
+        angular.module('myApp', ['ngMaterial'])
+            .config(function($mdThemingProvider) {
+
+                $mdThemingProvider.theme('default')
+                    .primaryPalette('pink', {
+                        'default': '400', // by default use shade 400 from the pink palette for primary intentions
+                        'hue-1': '100', // use shade 100 for the <code>md-hue-1</code> class
+                        'hue-2': '600', // use shade 600 for the <code>md-hue-2</code> class
+                        'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
+                    })
+                    // If you specify less than all of the keys, it will inherit from the
+                    // default shades
+                    .accentPalette('purple', {
+                        'default': '200' // use shade 200 for default, and keep all other shades the same
+                    });
+
+            });
+    </script>
 
 </body>
 </html>
